@@ -1,0 +1,183 @@
+$primary-color: #333;
+$blue: #42aaff;
+$green: #98ff98;
+$pesok: #f4a460;
+$slivki: #f6d1a4;
+$grey: #808080;
+$white: #ffffff;
+a{
+  cursor: pointer;
+}
+.main{
+  //background-color: $white;
+  nav{
+    background-color: $slivki;
+    .nav-item{
+      font-size: 1.3rem;
+    }
+  }
+  .alert{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: none;
+    width: 100%;
+  }
+  .carousel{
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+
+    .carousel-item{
+      height: 70vh;
+      .carousel-caption{
+        bottom: 45%;
+      }
+      p{
+        font-size: 2rem;
+      }
+      h5{
+        font-size: 3.25rem;
+      }
+    }
+  }
+
+}
+
+.advanced{
+  padding: 5% 0;
+  &_item{
+    svg{
+      width: 100%;
+      display: block;
+    }
+    h3{
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.reserv{
+
+    .table_main{
+      padding: 3% 3%;
+      overflow-y: auto;
+      thead{
+        background-color: $slivki;
+        color: $primary-color;
+      }
+    }
+    &_form{
+      padding: 3% 3%;
+    }
+    .card-deck{
+      flex-wrap: wrap
+    }
+    .modal-body{
+      img{
+        width: 100%;
+      }
+    }
+    .card{
+      flex-grow: 1;
+      flex: 0 0 33%;
+      margin: 0;
+      .card-header{
+        img{
+          width: 100%;
+        }
+
+      }
+    }
+  .minus{
+    cursor: pointer;
+    width:30%;
+    float:left;
+    text-align:center;
+
+  }
+  .plus {
+    cursor: pointer;
+    width:30%;
+    float:right;
+    text-align:center;
+  }
+
+  .inp_price {
+    width:40%;
+    text-align:center;
+    border:none;
+    border-left:1px solid gray;
+    border-right:1px solid gray;
+  }
+
+  .count_box {
+    width: 69%;
+    border: 1px solid gray;
+    margin: auto;
+  }
+}
+
+
+.footer{
+  background-color: $slivki;
+  padding: 5% 0;
+
+  svg{
+    width: 90%;
+  }
+}
+
+.btn:hover{
+  background-color: $primary-color;
+  color: $pesok;
+  transition: .4s;
+}
+.btn{
+  width: 100%;
+  background-color: $pesok;
+  border: 1px solid $slivki;
+}
+.btn-secondary{
+  width: 100%;
+  background-color: $slivki;
+  border: 1px solid $primary-color;
+}
+
+#pagination {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+}
+#pagination li {
+  margin-right: 5px;
+  padding: 10px;
+  border: 1px solid black;
+}
+#pagination li:hover, #pagination li.active {
+  cursor: pointer;
+  color: $slivki;
+  border: 1px solid $grey;
+}
+
+@media (max-width: 800px) {
+  .main{
+    .carousel{
+      height: auto;
+      .carousel-item{
+        height: auto;
+      }
+    }
+  }
+}
+@media (min-width: 800px) {
+  .main{
+    .carousel{
+      height: auto;
+    }
+  }
+  .modal-dialog {
+    max-width: 800px;
+    margin: 1.75rem auto;
+  }
+}
